@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+      <div class="Heater">
+        <h3 class="heaterText" id="MenuBtn">Menu</h3>
+        <h3 class="heaterText"><strong>Demo</strong>   </h2>
+        <input> </input>
+      </div>
+        
+      <div class='Tap'>
+        <h4 class="none1" id="Bm1" onclick='fun1()'> Game </h4>
+        <h4 class="none1" id="Bm2" onclick='fun2()'> Media 
+     </div>   
+      
+      <div class="none" id="c1">
+       
+          <div class="main">
+             <h3 class="itm" id="Qsn">  </h3>
+             <h3 class="itm" id="E1"> </h3>
+             <h3 class="itm" id="E2"> </h3>
+             <h3 class="itm" id="E3"> </h3>
+             <h3 class="itm" id="E4"> </h3>
+          </div>
+      
+      </div>
+       
+       <div class="none" id="c2">
+         <div class="elements1">
+         </div>
+       </div>
+       
+       
+       <div class="MyBar">
+         <a href="im.png"> <img src="IMG.jpg">  </img></a>
+       <strong>
+       <div class="Name"> Name :<span>
+        Anonymous</span> </div>
+        <strong>
+       <div class='UiLi'>  
+       <ul>
+          </strong> 
+            <li>Home</li>
+            <li>Profile Settings</li>
+            <li>Accounts</li>
+            <li>Logout</li>
+          </strong>
+      </div>   
+       </ul>
+<!--main js-->
+<script src="js/main.js"></script>
+<script src="js/Game.js"></script>
+</body>
+</html>
+
+<script>
+
+function fun1(){
+c1.classList.toggle('Av');
+c2.className="none";
+Bm1.classList.toggle('btn1');
+Bm2.className="none1";}
+
+
+function fun2(){
+c2.classList.toggle('Av');
+c1.className="none";
+Bm1.className="none1";
+Bm2.classList.toggle('btn1');}
+
+{}
+(function () {
+  'use strict'
+
+document.querySelector('#MenuBtn').addEventListener('click', function () {
+document.querySelector('.MyBar').classList.toggle('Active');
+
+  })
+})()
+
+var n=0;				
+var array1=["Who is United Kingdom prime minister ?","Modi","My dad","Boris Johnson","Bill gates"];
+
+var array2=["Why should Elon Mesk planing to go on mars","For dateing with Elieans girl friends","For make human's multy planetary","For expremant","I should ask my selfish friend's"];
+
+var array3=["Where is first time found corona virus","In china prime minister mouth","In pakistan","In Wuhan City","I should ask China prime minister"];
+
+var array4=["What Is Minimum Distants From Earth To Mars","30.9 million kilometres ","32303 million kilometres","33.9 million miles","you tell me"];
+
+var array5=["Q","4","c","c","c"];
+var array6=["Questions","5","Answer","Answer","Answer"];
+var array7=["Q","6","b","b","b"];
+var array8=["Q","7","c","c","c"];
+var array9=["Q","8","b","b","b"];
+var array10=["Q","9","c","c","c"];
+
+var  ElmName=['Qsn','E1','E2','E3','E4'];
+var Elm2=['E3','E2','E3','E2','E3','E2','E4','E2','E1','E3']
+
+var ArrayName=[array1,array2,array3,array4,array5,array6,array7,array8,array9,array10];
+
+function main(){
+n+=1;
+var all=ArrayName[n-1];
+for(var i=0; i<5; i++){
+var SetText=document.getElementById(ElmName[i]);
+SetText.innerHTML=all[i];
+SetText.className='itm';
+SetText.addEventListener('click',add1) }} main()
+
+
+function add(){
+
+window.setTimeout(main,2000)}
+
+function add1(e){
+var SetColor=document.getElementById(Elm2[n-1]);
+if(e.target.id==Elm2[n-1] && ArrayName[n-1]==ArrayName[n-1]){
+SetColor.className="Green";
+add()}
+
+else{
+add()
+SetColor.className="Green"; 
+document.getElementById(e.target.id).className="red";}}
+
+
+
+</script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+}
+
+.Heater{
+position:fixed;
+display:flex;
+justify-content:space-between;
+width:100%;
+height:80px;
+background:#2b58ff;
+box-shadow:black 0px 0px 20px;}
+
+.heaterText{
+font-size:1.2em;
+color:white;
+padding:14px;}
+
+input{
+width:40%;
+height:25px;
+margin:13px 20px 0px 0px;}
+
+.Tap{
+position:fixed;
+display:flex;
+top:50px;
+width:100%;
+text-align:center;
+justify-content:center;}
+
+h4{
+background:white;
+color:Black;
+padding:6px;
+width:50%;
+}
+
+.none.Av{
+transition: all .4s ;
+width:100%;
+height:100%;}
+
+.none{
+overflow:auto;
+transition: all .4s;
+height:0%;
+width:0%;}
+
+.none1.btn1{
+background:red;
+color:white;}
+
+.main{
+text-align: center;
+margin:110px 10px 0px 10px;
+}
+
+#QH {
+background:black;
+}
+.QT{
+margin:20px 0px 20px 0px;
+background:black;}
+
+.MyBar{
+position:fixed;
+top:50px;
+background:linear-gradient(#2b58ff,#40a1ff);
+color:white;
+width:250px;
+height:100%;
+right:100%;
+transition: all .4s;}
+
+.MyBar.Active{
+box-shadow:black 0px 100px 50px;
+transform: translatex(+100%);}
+
+.Name{
+color:white;
+border-bottom: white 3px solid;
+width:160px;
+margin:20px 0px 50px 30px;
+font-size:1em;}
+
+img {
+border:white 5px solid;
+width:100px;
+height:100px;
+border-radius: 50%;
+margin:30px 0px 10px 20px;}
+
+
+ul {
+padding:0; 
+list-style: none;
+}
+
+li {
+padding:10px 20px 10px 30px;
+margin:20px 10px 10px 10px ;}
+
+li:hover{
+font-size:16px;
+color:black;
+border:white 1px solid;
+background:white;
+border-radius:50px;}
+
+.main{
+text-align: center;
+margin:110px 10px 30px 10px;
+}
+
+.itm{
+margin:20px 0px 20px 0px;
+padding:10px;
+color:white;
+background:rgb(0,0,400,.5)}
+
+#Qsn{
+padding:60px;
+color:black;	
+background: white;
+border:#0057ff 2px solid;}
+
+.Green{
+margin:20px 0px 20px 0px;
+transition: all .3s;
+padding:10px;
+background:rgb(0,200,0,1);}
+
+.red{
+margin:20px 0px 20px 0px;
+transition: all .3s;
+padding:10px;
+background:#ff1554	;}
+
+</style>
+
+
+
+
+
+
+
